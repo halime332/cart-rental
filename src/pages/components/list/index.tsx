@@ -7,14 +7,14 @@ import { useSearchParams } from 'react-router-dom';
 
 
 const List: FC = () => {
+const [params,setParams]=useSearchParams();
 const [cars, setCars]=useState<ICar[]|null>(null);
 const [error, setError]=useState<string | null>(null);
-const [params,setParams]=useSearchParams();
 
 //urldeki arama parametrelerini besbe haline getir
 const paramsObj=Object.fromEntries(params.entries());
 
-console.log(paramsObj);
+
 
     useEffect(()=>{
         fetchCars({...paramsObj})

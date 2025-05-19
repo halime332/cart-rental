@@ -18,9 +18,10 @@ export const fetchCars= async({
     model,
  
  }:Filter): Promise<FetchCarsReturn>=>{
-    const  url=`https://public.opendatasoft.com/api/explore/v2.1/
-    catalog/datasets/all-vehicles-model/
-    records?limit=20&refine=make:"BMW"`;
+   const url = `https://public.opendatasoft.com/api/explore/v2.1/
+catalog/datasets/all-vehicles-model/records?limit=20&refine=make:${make}&refine=model:${model}`;
+    
+   
 
     const res= await fetch (url);
     
