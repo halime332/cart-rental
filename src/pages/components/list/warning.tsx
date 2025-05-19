@@ -1,4 +1,5 @@
-import type { FC } from "react";
+import { FC } from "react";
+
 
 type Props={
    children:JSX.Element |string;
@@ -7,8 +8,8 @@ type Props={
 const Warning:FC<Props> = ({children}) => {
   return (
      <div className='padding-x max-width'>
-      <p className='home-error-container'>{children}</p>
-      </div>
+       <p className='home-error-container'>{children}</p>
+    </div>
   );
 };
 

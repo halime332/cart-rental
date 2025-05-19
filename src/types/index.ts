@@ -68,7 +68,7 @@ export interface ICar {
   trans_dscr: string | null;
   tcharger: "T" | null;
   scharger: "S" | null;
-  atvtype: string | null;
+  atvtype?: string | null;
   fueltype2: string | null;
   rangea: number | null;
   evmotor: string | null;
@@ -78,7 +78,7 @@ export interface ICar {
   c240bdscr: string | null;
   createdon: string;
   modifiedon: string;
-  startstop: "Y" | "S";
+  startstop: "Y" | "N";
   phevcity: number;
   phevhwy: number;
   phevcomb: number;
