@@ -16,7 +16,12 @@ const SearchBar:FC = () => {
  const handleSubmit=(e: FormEvent<HTMLFormElement>) =>{
   e.preventDefault();
 
- setParams({make,model});
+  if(make&& model !==""){
+     setParams({make,model});
+  }else if (make && model== ""){
+     setParams({make});
+  }
+
  };
 
 
