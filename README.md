@@ -14,3 +14,5 @@
 - **Araç görselleri**
 
 -[ımagin Studio](https://docs.imagin.studio/guides/getting-images/embedding-in-your-website)
+
+<img src="screen.gif"/>
