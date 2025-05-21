@@ -7,7 +7,7 @@ import Header from "./pages/components/header";
 const App:FC= () => {
   return (
     <BrowserRouter>
-    <div className="min-h-screen bg-dark-gray text-white">
+    <div className="min-h-screen bg-secondary-orange text-white">
     <Header/>
     <Routes>
       <Route path="/" element={<Home/>}/>

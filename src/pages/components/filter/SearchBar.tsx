@@ -1,4 +1,4 @@
-import { useState, type FC, type FormEvent } from "react";
+import { useMemo, useState, type FC, type FormEvent } from "react";
 import ReactSelect from "react-select";
 import { makes } from "../../../utils/constants";
 import { useSearchParams } from "react-router-dom";
@@ -10,7 +10,12 @@ const SearchBar:FC = () => {
   const [model,setModel]=useState<string>("");
   const [params,setParams]= useSearchParams();
 
-  const options = makes.map((make)=>({value:make, label:make}));
+//useMemo ile her render sırasında tekrar hesaplanmasının
+//string[] olan makes react react selecte uygun formata getirdik
+  const options = useMemo(
+    ()=>makes.map((make)=>({value:make, label:make})),
+    []
+  );
  // string[] olan makesi react selecte uygun formata getirdik
 
  const handleSubmit=(e: FormEvent<HTMLFormElement>) =>{

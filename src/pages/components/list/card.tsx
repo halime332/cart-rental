@@ -37,7 +37,7 @@ const Card:FC<Props> = ({car}) => {
       <div className='w-full'>
           <img 
           src={generateImage(car)}
-           alt={car.model} className='w-full h-full object-contain'/>
+           alt={car.model} className='w-full h-full object-contain min-h-[200px]'/>
       </div>
 
       {/* temel bilgiler */}

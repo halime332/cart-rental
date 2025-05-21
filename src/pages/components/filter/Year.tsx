@@ -25,14 +25,20 @@ const Year:FC = () => {
     <form className="flex flex-col" onSubmit={handleSubmit}>
       <label> Yıl:</label>
 
+    <div className="flex">
       <input type="number"
-        className="w-24 py-[6px] px-2 rounded-[4px] shadow text-black bg-white"
+        className="w-24 py-[6px] px-2 rounded-l-[px] shadow text-black bg-white border-r border-zinc-200"
         placeholder="örn:2023"
         onChange={(e)=>setYear(e.target.value)}
         defaultValue={params.get("year") as string}
        />
+
+       <button className="bg-white rounded-r px-3 text-blue-500 hover:bg-zinc-200 transition cursor-pointer">
+         <img src="/search.png" className="w-[50px]" />
+       </button>
+      </div>
     </form>
-  )
-}
+  );
+};
 
 export default Year;
